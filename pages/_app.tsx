@@ -1,6 +1,9 @@
-import "../styles/globals/scss";
+import "../styles/globals.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 import type { AppProps } from "next/app";
 
-export default function App({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
+
+export default MyApp;
