@@ -5,7 +5,7 @@ const CardsSection = function () {
     return (
         <>
             <p className={styles.sectionTitle}>O QUE VOCÊ VAI ACESSAR</p>
-            <Container className="d-flex flex-wrap justify-content-center gap-4 pb-5">
+            <Container className="d-flex flex-wrap justify-content-center gap-4 py-4">
                 <div className={styles.card1}>
                     <p className={styles.cardTitle}>FRONT-END</p>
                     <p className={styles.cardDescription}>
