@@ -12,6 +12,7 @@ const Register = function () {
     const router = useRouter();
     const [ toastIsOpen, setToastIsOpen ] = useState(false);
     const [ toastMessage, setToastMessage ] = useState("");
+    
     const handleRegister = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
