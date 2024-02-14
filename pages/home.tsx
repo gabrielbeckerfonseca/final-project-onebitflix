@@ -4,6 +4,10 @@ import Head from "next/head"
 import FavoriteCategory from "../src/components/homeAuth/favoriteCategory";
 import FeaturedCategory from "../src/components/homeAuth/featuredCategory";
 import ListCategories from "../src/components/homeAuth/listCategories";
+import Footer from "../src/components/common/footer";
+import Link from "next/link";
+import { Button } from "reactstrap";
+import styles from "../styles/HomeNoAuth.module.scss"
 
 const HomeAuth = function (){
     return (
@@ -17,7 +21,12 @@ const HomeAuth = function (){
                 <NewestCategory />
                 <FavoriteCategory />
                 <FeaturedCategory />
-                <ListCategories />
+                <Link href="/categories">
+                        <Button className={styles.navBtn} outline>
+                            ACESSAR TODAS AS CATEGORIAS
+                        </Button>
+                    </Link> 
+                <Footer />
             </main>
         </>
     );
