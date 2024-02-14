@@ -4,7 +4,6 @@ import useSWR from "swr";
 import styles from "../../../../styles/slidecategory.module.scss"
 
 const NewestCategory = function () {
-
     const { data, error } = useSWR("/newest", courseService.getNewestCourses);
 
     if (error) return error;
