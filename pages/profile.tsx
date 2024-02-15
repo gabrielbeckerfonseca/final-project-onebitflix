@@ -3,8 +3,13 @@ import styles from "../styles/profile.module.scss"
 import UserForm from "../src/components/profile/user"
 import HeaderAuth from "../src/components/common/headerAuth";
 import { Button, Col, Container, Row } from "reactstrap";
+import { useState } from "react";
+import PasswordForm from "../src/components/profile/password";
+import Footer from "../src/components/common/footer";
 
 const UserInfo = function () {
+    const [form, setForm] = useState("userForm")
+
     return (
         <>
         <Head>
@@ -17,18 +22,33 @@ const UserInfo = function () {
                 <p className={styles.title}>Minha conta</p>
                 <Row className="pt-3 pb-5">
                     <Col md={4} className={styles.btnColumn}>
-                        <Button className={styles.renderForm}>
+                        <Button 
+                            className={styles.renderForm}
+                            style={{ color: form === "userForm" ? "#FF0044" : "white" }}
+                            onClick={() => {
+                                setForm("userForm");
+                            }}
+                        >
                             Dados pessoais
                         </Button>
-                        <Button className={styles.renderForm}>
+                        <Button 
+                            className={styles.renderForm}
+                            style={{ color: form === "passwordForm" ? "#FF0044" : "white" }}
+                            onClick={() => {
+                                setForm("passwordForm");
+                            }}
+                        >
                             Senha
                         </Button>
                     </Col>
                     <Col md>
-                        <UserForm />
+                        { form === "userForm" ? <UserForm /> : <PasswordForm /> }
                     </Col>
                 </Row>
             </Container>
+            <div className={styles.footer}>
+                <Footer />
+            </div>
         </main>
         </>
     );
