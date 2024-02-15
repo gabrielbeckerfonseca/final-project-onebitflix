@@ -4,7 +4,8 @@ import Footer from "../src/components/common/footer";
 import Link from "next/link";
 import { Button } from "reactstrap";
 import styles from "../styles/HomeNoAuth.module.scss";
-import FeaturedSection from "../srcgi/components/homeAuth/featuredSection";
+import FeaturedSection from "../src/components/homeAuth/featuredSection";
+import HeaderAuth from "../src/components/common/headerAuth";
 
 const Categories = function (){
     return (
@@ -14,8 +15,7 @@ const Categories = function (){
                 <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
             </Head>
             <main>
-            <FeaturedSection />
-
+            <HeaderAuth />
                 <ListCategories />
                 <Link href="/home">
                     <Button className={styles.navBtn} outline>
