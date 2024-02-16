@@ -1,0 +1,45 @@
+@import "../../../styles/colors.module.scss";
+
+.searchCard{
+    width: 320px;
+    height: 345px;
+    border: 1px solid $darkGray;
+    overflow: hidden;
+    text-overflow: clip;
+    cursor: pointer;
+    
+    transition: 0.4s;
+    &:hover{
+        border-color: $lightRed;
+        height: 400px;
+    }
+}
+
+.searchImg{
+    width: 100%;
+    height: 100%;
+}
+
+.searchCardName{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.searchCardDescription{
+    color: $lightGray;
+    padding: 0px 20px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+@media (max-width: 350px){
+    .searchCardNamra{
+        font-size: 16px;
+    }
+    .searchCardDescription{
+        font-size: 14px;
+    }
+}
+
