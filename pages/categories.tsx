@@ -15,14 +15,18 @@ const Categories = function (){
                 <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
             </Head>
             <main>
-            <HeaderAuth />
+            <div style={{ backgroundColor: '#151515' }}>
+                    <HeaderAuth />
+                </div>
                 <ListCategories />
                 <Link href="/home">
                     <Button className={styles.navBtn} outline>
                             Voltar                   
                     </Button>
                 </Link>
-                <Footer />
+                <div style={{ backgroundColor: '#151515' }}>
+                    <Footer />
+                </div>            
             </main>
         </>
     );

@@ -17,7 +17,9 @@ const UserInfo = function () {
             <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
         </Head>
         <main className={styles.main}>
-            <HeaderAuth />
+        <div style={{ backgroundColor: '#151515' }}>
+            <HeaderAuth/>
+        </div>
             <Container className={styles.gridContainer}>
                 <p className={styles.title}>Minha conta</p>
                 <Row className="pt-3 pb-5">

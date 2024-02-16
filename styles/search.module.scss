@@ -3,8 +3,11 @@
     flex-direction: column;
 }
 
-.searchResult{
+.searchContainer{
     flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .noSearchResult{
@@ -12,6 +15,7 @@
     padding: 20px;
     font-size: 24px;
     font-weight: bold;
+    justify-content: center;
 }
 
 .headerFooterBg{

@@ -26,7 +26,9 @@ const HomeAuth = function (){
                             ACESSAR TODAS AS CATEGORIAS
                         </Button>
                     </Link> 
-                <Footer />
+                <div style={{ backgroundColor: '#151515' }}>
+                    <Footer />
+                </div>
             </main>
         </>
     );
