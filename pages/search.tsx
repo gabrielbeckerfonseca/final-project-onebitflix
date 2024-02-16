@@ -11,11 +11,10 @@ const Search = function () {
     const [searchResult, setSearchResult] = useState<CourseType[]>([]);
 
     const searchCourses = async function () {
-        if (typeof searchName === "string" && searchName.trim() !== "") {
             const res = await courseService.getSearch(searchName);
             setSearchResult(res.data.courses);
-        }
-    };
+        };
+    
 
     useEffect(() => {
         searchCourses();
