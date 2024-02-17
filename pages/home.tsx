@@ -8,8 +8,26 @@ import Footer from "../src/components/common/footer";
 import Link from "next/link";
 import { Button } from "reactstrap";
 import styles from "../styles/HomeNoAuth.module.scss"
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import PageSpinner from "../src/components/common/spinner";
 
 const HomeAuth = function (){
+    const router = useRouter();
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        if(!sessionStorage.getItem("onebitflix-token")) {
+            router.push("/login");
+        } else {
+            setLoading(false);
+        }
+    }, []);
+
+    if(loading) {
+        return <PageSpinner />
+    }
+
     return (
         <>
             <Head>
