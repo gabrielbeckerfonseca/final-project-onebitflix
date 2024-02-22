@@ -39,11 +39,14 @@ const HomeAuth = function (){
                 <NewestCategory />
                 <FavoriteCategory />
                 <FeaturedCategory />
-                <Link href="/categories">
+                <div className={styles.divBtn}>
+                    <Link href="/categories">
                         <Button className={styles.navBtn} outline>
-                            ACESSAR TODAS AS CATEGORIAS
+                            ACESSE TODAS AS CATEGORIAS
                         </Button>
                     </Link> 
+                </div>
+                
                 <div style={{ backgroundColor: '#151515' }}>
                     <Footer />
                 </div>
